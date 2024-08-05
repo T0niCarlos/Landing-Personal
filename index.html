@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Personal Trainer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Personal Trainer</div>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="about animate-on-scroll">
+        <div class="about-container">
+            <div class="about-content">
+                <h1>Sobre Mim</h1>
+                <p>Eu sou um personal trainer certificado com experiência em ajudar pessoas a atingirem seus objetivos de fitness.</p>
+                <p>Com um programa personalizado e atenção aos detalhes, ajudo meus clientes a se transformarem.</p>
+            </div>
+            <div class="about-images">
+                <div class="image-container main-image">
+                    <img src="images/foto-personal.png" alt="Foto do Personal Trainer">
+                </div>
+                <div class="image-container overlay-image">
+                    <img src="images/foto-treinamento.png" alt="Foto de Treinamento" class="translucent">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="services">
+        <h2>Serviços</h2>
+        <div class="services-container">
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <i class="icon-customized-training"></i>
+                </div>
+                <h3>Treino Personalizado</h3>
+                <p>Programas de treino adaptados às suas necessidades e objetivos.</p>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <i class="icon-nutrition-consulting"></i>
+                </div>
+                <h3>Consultoria Nutricional</h3>
+                <p>Aconselhamento para uma dieta balanceada que complemente o seu treino.</p>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <i class="icon-online-training"></i>
+                </div>
+                <h3>Treinamento Online</h3>
+                <p>Aulas e acompanhamento à distância para sua comodidade.</p>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <i class="icon-group-training"></i>
+                </div>
+                <h3>Treinamento em Grupo</h3>
+                <p>Se divirta treinando com amigos ou familiares em sessões coletivas.</p>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <i class="icon-rehabilitation"></i>
+                </div>
+                <h3>Reabilitação Física</h3>
+                <p>Recuperação de lesões com exercícios específicos.</p>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <i class="icon-wellness-programs"></i>
+                </div>
+                <h3>Programas de Bem-Estar</h3>
+                <p>Melhore seu estilo de vida com práticas de bem-estar e saúde.</p>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <i class="icon-yoga"></i>
+                </div>
+                <h3>Yoga</h3>
+                <p>Exercícios de yoga para flexibilidade e tranquilidade mental.</p>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <i class="icon-massage"></i>
+                </div>
+                <h3>Massagem Desportiva</h3>
+                <p>Alivie a tensão muscular e melhore a recuperação com massagens.</p>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <div class="icon-container">
+                    <i class="icon-functional-training"></i>
+                </div>
+                <h3>Treinamento Funcional</h3>
+                <p>Melhore sua força e condicionamento físico com exercícios funcionais.</p>
+            </div>
+        </div>
+    </section>
+   
+    <section id="contact" class="contact">
+        <h2>Contato</h2>
+        <p>Entre em contato para mais informações ou para agendar uma sessão:</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="images/email-icon.png" alt="Email" class="icon">
+                <a href="mailto:contato@personaltrainer.com">contato@personaltrainer.com</a>
+            </div>
+            <div class="contact-item">
+                <img src="images/phone-icon.png" alt="Telefone" class="icon">
+                <span>(99) 99999-9999</span>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Dev Antônio Carlos. Todos os direitos reservados.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="images/facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/instagram-icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="images/twitter-icon.png" alt="Twitter">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=5551999999999" class="whatsapp-button" target="_blank">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp">
+    </a>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            var button = document.querySelector('.whatsapp-button');
+            if (window.scrollY > 200) { // Ajuste o valor conforme necessário
+                button.classList.add('visible');
+            } else {
+                button.classList.remove('visible');
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

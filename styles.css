@@ -1,0 +1,363 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #fff;
+  background-color: #000;
+}
+
+header {
+  background-color: #c00;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-size: 1.5rem;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav ul li {
+  margin-left: 1rem;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+header nav ul li a:hover {
+  color: #660000;
+}
+
+.about, .services, .contact {
+  padding: 2rem 1rem;
+  text-align: center;
+  /* Seção Sobre */
+}
+.about .about, .services .about, .contact .about {
+  background-color: #000; /* Fundo preto */
+  color: #fff; /* Texto branco */
+  padding: 4rem 2rem;
+}
+.about .about-container, .services .about-container, .contact .about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about .about-content, .services .about-content, .contact .about-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem;
+}
+.about .about-content h1, .services .about-content h1, .contact .about-content h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.about .about-content p, .services .about-content p, .contact .about-content p {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.about .about-images, .services .about-images, .contact .about-images {
+  flex: 1;
+  display: flex;
+  position: relative;
+  min-width: 300px;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.about .image-container, .services .image-container, .contact .image-container {
+  position: relative;
+}
+.about .main-image img, .services .main-image img, .contact .main-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+.about .overlay-image, .services .overlay-image, .contact .overlay-image {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 70%;
+  z-index: -1;
+}
+.about .overlay-image img, .services .overlay-image img, .contact .overlay-image img {
+  width: 100%;
+  opacity: 0.3; /* Transparência */
+  border-radius: 10px;
+  filter: grayscale(100%);
+}
+.about .image-container:hover .main-image img, .services .image-container:hover .main-image img, .contact .image-container:hover .main-image img {
+  transform: scale(1.05);
+}
+.about .translucent, .services .translucent, .contact .translucent {
+  opacity: 0.3;
+}
+.about .about-container .image-container img, .services .about-container .image-container img, .contact .about-container .image-container img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+
+.services {
+  background-color: #000; /* Fundo preto */
+  padding: 2rem 1rem;
+}
+
+.services h2 {
+  text-align: center;
+  color: #fff; /* Texto branco */
+  margin-bottom: 2rem;
+}
+
+.services .services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.1); /* Fundo branco translúcido */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda translúcida */
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 1.5rem;
+  width: 250px;
+  text-align: center;
+  color: #fff; /* Texto branco */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3); /* Sombra com detalhe em vermelho */
+}
+
+.icon-container {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff; /* Cor dos ícones */
+  position: relative;
+}
+
+.icon-container::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0.5); /* Fundo vermelho translúcido */
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  left: calc(50% - 25px);
+  z-index: -1;
+}
+
+.service-card h3 {
+  color: #fff; /* Texto branco */
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: #ccc; /* Texto cinza claro */
+  font-size: 1rem;
+}
+
+/* Ícones personalizados */
+.icon-customized-training::before {
+  content: "💪"; /* Ícone de bíceps */
+}
+
+.icon-nutrition-consulting::before {
+  content: "🍎"; /* Ícone de maçã */
+}
+
+.icon-online-training::before {
+  content: "💻"; /* Ícone de laptop */
+}
+
+.icon-group-training::before {
+  content: "👥"; /* Ícone de grupo */
+}
+
+.icon-rehabilitation::before {
+  content: "🩹"; /* Ícone de bandagem */
+}
+
+.icon-wellness-programs::before {
+  content: "💆"; /* Ícone de relaxamento */
+}
+
+.icon-yoga::before {
+  content: "🧘"; /* Ícone de yoga */
+}
+
+.icon-massage::before {
+  content: "💆"; /* Ícone de massagem */
+}
+
+.icon-functional-training::before {
+  content: "🏋️"; /* Ícone de levantamento de peso */
+}
+
+.icon-container i::before {
+  display: inline-block;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.contact h2 {
+  color: #fff; /* Título em branco */
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  color: #ccc; /* Texto informativo em cinza claro */
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.contact-item img.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-item a, .contact-item span {
+  color: #fff; /* Texto dos links e telefone em branco */
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.contact-item a:hover, .contact-item span:hover {
+  color: #ff0000; /* Detalhes em vermelho ao passar o mouse */
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whatsapp.visible {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+footer {
+  background-color: #c00;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+footer .footer-content p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+footer .footer-content .social-media {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+footer .footer-content .social-media a {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+footer .footer-content .social-media a img {
+  width: 30px;
+  height: 30px;
+}
+footer .footer-content .social-media a:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 130px; /* Ajuste a distância do rodapé aqui */
+  right: 10px; /* Ajuste a distância da lateral direita aqui */
+  z-index: 1000; /* Garante que o botão fique sobre outros elementos */
+  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 0.3s;
+}
+
+.whatsapp-button.visible {
+  opacity: 0.8; /* Torna o botão visível */
+}
+
+.whatsapp-button img {
+  width: 60px; /* Ajuste o tamanho do ícone aqui */
+  height: 60px; /* Ajuste o tamanho do ícone aqui */
+}
+
+.whatsapp-button:hover {
+  opacity: 1; /* Opacidade ao passar o mouse */
+}
+
+.whatsapp-button img {
+  width: 60px; /* Ajuste o tamanho do ícone aqui */
+  height: 60px; /* Ajuste o tamanho do ícone aqui */
+}
+
+@media screen and (max-width: 768px) {
+  .whatsapp {
+    bottom: calc(100vh - 140px);
+  }
+}/*# sourceMappingURL=styles.css.map */
